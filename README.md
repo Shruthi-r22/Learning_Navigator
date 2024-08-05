@@ -34,9 +34,9 @@ Learning Navigator is a Spring Boot application designed to manage students, exa
 
 1. Clone the repository
    ``` bash
-      git clone https://github.com/Shruthi-r22/Learning-Navigator
+      git clone https://github.com/Shruthi-r22/Learning_Navigator.git
       
-      cd learning-navigator
+      cd learning_navigator
    ```
 2. Start MySQL Database
    
