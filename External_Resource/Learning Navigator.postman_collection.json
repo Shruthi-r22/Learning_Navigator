@@ -1,0 +1,1536 @@
+{
+	"info": {
+		"_postman_id": "d667cecd-03e4-4f44-907b-aff90fb94025",
+		"name": "Learning Navigator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9489530"
+	},
+	"item": [
+		{
+			"name": "students",
+			"item": [
+				{
+					"name": "Get Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{students}}",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{students}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Students",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:31:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"John\",\n        \"enrolledSubjects\": [],\n        \"enrolledExams\": []\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Bob\",\n        \"enrolledSubjects\": [],\n        \"enrolledExams\": []\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Mishra\",\n        \"enrolledSubjects\": [],\n        \"enrolledExams\": []\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Guddu Pandit\",\n        \"enrolledSubjects\": [],\n        \"enrolledExams\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Students By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{students}}/2",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{students}}",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Students By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:31:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Bob\",\n    \"enrolledSubjects\": [],\n    \"enrolledExams\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Guddu Pandit\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{students}}",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{students}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Guddu Pandit\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:30:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Guddu Pandit\",\n        \"enrolledSubjects\": [],\n        \"enrolledExams\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enrolledSubjects\": [\n        {\n            \"id\": 3\n        }\n    ],\n    \"enrolledExams\": [\n        {\n            \"id\": 56\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{students}}/52",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{students}}",
+								"52"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Student",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"enrolledSubjects\": [\n        {\n            \"id\": 1\n        },\n        {\n            \"id\": 2\n        },\n        {\n            \"id\": 4\n        }\n    ],\n    \"enrolledExams\": [\n        {\n            \"id\": 54\n        },\n        {\n            \"id\": 2\n        },\n        {\n            \"id\": 55\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"1"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:13:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student\": {\n        \"id\": 1,\n        \"name\": \"John\",\n        \"enrolledSubjects\": [\n            {\n                \"id\": 1,\n                \"name\": \"Biology-Transformed\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Physics\"\n            }\n        ],\n        \"enrolledExams\": [\n            {\n                \"id\": 54,\n                \"name\": \"Biology-Transformed Exam\",\n                \"subject\": {\n                    \"id\": 1,\n                    \"name\": \"Biology-Transformed\"\n                }\n            },\n            {\n                \"id\": 55,\n                \"name\": \"Physics Exam\",\n                \"subject\": {\n                    \"id\": 2,\n                    \"name\": \"Physics\"\n                }\n            }\n        ]\n    },\n    \"notFoundSubjectIds\": [\n        4\n    ],\n    \"notFoundExamIds\": [\n        2\n    ]\n}"
+						},
+						{
+							"name": "Update Student-Subject vs Exam",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"enrolledSubjects\": [\n        {\n            \"id\": 1\n        },\n        {\n            \"id\": 5\n        },\n        {\n            \"id\": 8\n        }\n    ],\n    \"enrolledExams\": [\n        {\n            \"id\": 54\n        },\n        {\n            \"id\": 56\n        },\n        {\n            \"id\": 55\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/2",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"2"
+									]
+								}
+							},
+							"status": "Multi-Status (WebDAV) (RFC 4918)",
+							"code": 207,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:14:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"student\": {\n        \"id\": 2,\n        \"name\": \"Bob\",\n        \"enrolledSubjects\": [\n            {\n                \"id\": 1,\n                \"name\": \"Biology-Transformed\"\n            }\n        ],\n        \"enrolledExams\": [\n            {\n                \"id\": 54,\n                \"name\": \"Biology-Transformed Exam\",\n                \"subject\": {\n                    \"id\": 1,\n                    \"name\": \"Biology-Transformed\"\n                }\n            }\n        ]\n    },\n    \"notFoundSubjectIds\": [\n        5,\n        8\n    ],\n    \"notFoundExamIds\": []\n}"
+						},
+						{
+							"name": "Update Student-200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"enrolledSubjects\": [\n        {\n            \"id\": 1\n        }\n    ],\n    \"enrolledExams\": [\n        {\n            \"id\": 54\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/3",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:15:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"student\": {\n            \"id\": 3,\n            \"name\": \"Mishra\",\n            \"enrolledSubjects\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"Biology-Transformed\"\n                }\n            ],\n            \"enrolledExams\": [\n                {\n                    \"id\": 54,\n                    \"name\": \"Biology-Transformed Exam\",\n                    \"subject\": {\n                        \"id\": 1,\n                        \"name\": \"Biology-Transformed\"\n                    }\n                }\n            ]\n        },\n        \"notFoundSubjectIds\": [],\n        \"notFoundExamIds\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Students By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{students}}/8",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{students}}",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Students By Id-200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/4",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:18:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						},
+						{
+							"name": "Delete Students By Id-404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{students}}/8",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{students}}",
+										"8"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:18:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Student not found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "subjects",
+			"item": [
+				{
+					"name": "Get Subjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{subjects}}",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{subjects}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Subjects",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:34:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Biology\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Physics\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Mathematics\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Subjects By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{subjects}}/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{subjects}}",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Subjects By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:34:34 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Biology\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Subject",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"English literature\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{subjects}}/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{subjects}}",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Subject",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Biology\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:33:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Biology\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Subject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Biology-Transformed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{subjects}}/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{subjects}}",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Subject",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Biology-Transformed\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:52:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Biology-Transformed\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Subject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{subjects}}/52",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{subjects}}",
+								"52"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Subject-200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}/52",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}",
+										"52"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:19:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "true"
+						},
+						{
+							"name": "Delete Subject-404",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{subjects}}/522",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{subjects}}",
+										"522"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:20:13 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Subject Not Found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "exams",
+			"item": [
+				{
+					"name": "Get Exams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{exams}}",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{exams}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Exams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:49:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 54,\n        \"subject\": {\n            \"id\": 1,\n            \"name\": \"Biology\"\n        }\n    },\n    {\n        \"id\": 55,\n        \"subject\": {\n            \"id\": 2,\n            \"name\": \"Physics\"\n        }\n    },\n    {\n        \"id\": 56,\n        \"subject\": {\n            \"id\": 3,\n            \"name\": \"Mathematics\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Exams By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{exams}}/54",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{exams}}",
+								"54"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Exams By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}/54",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}",
+										"54"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:50:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 54,\n    \"subject\": {\n        \"id\": 1,\n        \"name\": \"Biology\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Exams",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subjectId\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{exams}}",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{exams}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Exams",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subjectId\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:47:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 54,\n        \"subject\": {\n            \"id\": 1,\n            \"name\": \"Biology\"\n        }\n    }\n}"
+						},
+						{
+							"name": "Create Exams-Conflict",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subjectId\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:47:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Exam already exist for this subject\"\n}"
+						},
+						{
+							"name": "Create Exams-Subject Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subjectId\":10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:48:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Subject not found\"\n}"
+						},
+						{
+							"name": "Create Exams-Validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subjectId\":null\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:48:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"subjectId\": \"must not be null\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Exams",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Biology-Transformed Exam\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{exams}}/54",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{exams}}",
+								"54"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Exams",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Biology-Transformed Exam\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{exams}}/54",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{exams}}",
+										"54"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 16:12:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 54,\n        \"name\": \"Biology-Transformed Exam\",\n        \"subject\": {\n            \"id\": 1,\n            \"name\": \"Biology-Transformed\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Exams",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{exams}}/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{exams}}",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ester-egg",
+			"item": [
+				{
+					"name": "ester-egg",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}:{{port}}/{{esteregg}}/26",
+							"host": [
+								"{{localhost}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{esteregg}}",
+								"26"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ester-egg",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localhost}}:{{port}}/{{esteregg}}/1",
+									"host": [
+										"{{localhost}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"{{esteregg}}",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain;charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Jul 2024 15:31:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "1 is the number of dimensions of a line."
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhost",
+			"value": "127.0.0.1",
+			"type": "string"
+		},
+		{
+			"key": "port",
+			"value": "8080",
+			"type": "string"
+		},
+		{
+			"key": "authbase",
+			"value": "api/v1/auth",
+			"type": "string"
+		},
+		{
+			"key": "students",
+			"value": "students",
+			"type": "string"
+		},
+		{
+			"key": "exams",
+			"value": "exams",
+			"type": "string"
+		},
+		{
+			"key": "subjects",
+			"value": "subjects",
+			"type": "string"
+		},
+		{
+			"key": "esteregg",
+			"value": "hidden-feature",
+			"type": "string"
+		}
+	]
+}
