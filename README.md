@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Learning Navigator
 
 ## Description
@@ -58,3 +59,6 @@ Learning Navigator is a Spring Boot application designed to manage students, exa
 
 - Perform CRUD operations on students, exams, subjects, and contests as needed. 
 - Integrate additional features or extend functionalities based on project requirements.
+=======
+# Learning-Navigator
+>>>>>>> 0f01ceba4071d047f3b09b06bb9e2e37d4343628
